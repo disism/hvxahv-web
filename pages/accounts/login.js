@@ -63,7 +63,7 @@ const Login = () => {
         <button onClick={handleLogin} style={{ marginRight: `.5rem` }}>
           SUBMIT
         </button>
-        <button onClick={() => router.push("/accounts/registered")}>
+        <button onClick={() => router.push("/accounts/registered.js")}>
           REGISTERED
         </button>
         <p>{message && message.message}</p>
