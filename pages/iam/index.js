@@ -46,7 +46,7 @@ const IAm = () => {
             <h1>IAm</h1>
             { accounts &&
             <div>
-              <h2>{accounts.username} </h2>
+              <h2>{accounts.name} </h2>
             </div>
             }
           </div>

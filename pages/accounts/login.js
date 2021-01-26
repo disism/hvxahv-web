@@ -27,7 +27,7 @@ const Login = () => {
       .then(res => {
         setMessage(res)
         localStorage.setItem("godis_login_token", res.token)
-        router.reload()
+        // router.reload()
       })
       .catch(err => console.log('error', err));
   }
@@ -60,10 +60,10 @@ const Login = () => {
                  value={password} onChange={e => setPassword(e.target.value)}
           />
         </section>
-        <button onClick={handleLogin} style={{ marginRight: `.5rem` }}>
+        <button onClick={() => handleLogin()} style={{ marginRight: `.5rem` }}>
           SUBMIT
         </button>
-        <button onClick={() => router.push("/accounts/registered.js")}>
+        <button onClick={() => router.push("/accounts/registered")}>
           REGISTERED
         </button>
         <p>{message && message.message}</p>
