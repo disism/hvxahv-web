@@ -7,6 +7,10 @@ exports.Logged = [
     "name": "iam",
     "address": "/iam"
   },
+  {
+    "name": "inbox",
+    "address": "/inbox"
+  },
 ]
 
 exports.NoLogged = [
