@@ -51,7 +51,7 @@ const Inbox = () => {
       redirect: 'follow'
     }
 
-    fetch(`${process.env.address}/api/v1/followers/accept`, requestOptions)
+    fetch(`${process.env.address}/api/v1/follower/accept`, requestOptions)
       .then(res => res.json())
       .then(res => {
         serFollow(res)
@@ -81,6 +81,13 @@ const Inbox = () => {
                     <div>
                       <span>Notice: "关注了您"</span>
                       <button onClick={() => handleAccept(item.RequestId, item.Actor)}>同意</button>
+                    </div>
+                    :
+                    null}
+
+                  {item.EventType === "Create" ?
+                    <div>
+                      <a href={item.RequestId} target="_blink">Notice: {item.Actor} "发布了一篇文章"</a>
                     </div>
                     :
                     null}
