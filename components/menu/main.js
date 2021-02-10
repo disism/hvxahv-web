@@ -11,6 +11,10 @@ exports.Logged = [
     "name": "inbox",
     "address": "/inbox"
   },
+  {
+    "name": "new",
+    "address": "/new/article"
+  },
 ]
 
 exports.NoLogged = [
