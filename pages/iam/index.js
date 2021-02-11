@@ -4,6 +4,7 @@ import Loading from "../../components/loading";
 import process from "../../next.config";
 import { useRouter } from "next/router";
 
+// TODO ADD GET FOLLOWER AND FOLLOWING FUNCTION
 const IAm = () => {
   const router = useRouter()
   const [accounts, setAccounts] = useState({})
