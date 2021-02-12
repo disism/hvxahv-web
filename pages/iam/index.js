@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import Loading from "../../components/loading";
 import process from "../../next.config";
 import { useRouter } from "next/router";
+import Follower from "../../components/follow/follower"
+import Following from "../../components/follow/following";
 
 // TODO ADD GET FOLLOWER AND FOLLOWING FUNCTION
 const IAm = () => {
@@ -48,6 +50,7 @@ const IAm = () => {
             { accounts &&
             <div>
               <h2>{accounts.name} </h2>
+              <Follower /> · <Following />
             </div>
             }
           </div>

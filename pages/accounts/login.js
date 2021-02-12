@@ -27,7 +27,7 @@ const Login = () => {
       .then(res => {
         setMessage(res)
         localStorage.setItem("godis_login_token", res.token)
-        // router.reload()
+        router.reload()
       })
       .catch(err => console.log('error', err));
   }
