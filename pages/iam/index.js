@@ -5,8 +5,8 @@ import process from "../../next.config";
 import { useRouter } from "next/router";
 import Follower from "../../components/follow/follower"
 import Following from "../../components/follow/following";
+import GetArticles from "../../components/article/get"
 
-// TODO ADD GET FOLLOWER AND FOLLOWING FUNCTION
 const IAm = () => {
   const router = useRouter()
   const [accounts, setAccounts] = useState({})
@@ -51,6 +51,9 @@ const IAm = () => {
             <div>
               <h2>{accounts.name} </h2>
               <Follower /> · <Following />
+              <div>
+                <GetArticles />
+              </div>
             </div>
             }
           </div>
